@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio | Graphic Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
+        .pink-gradient { background: linear-gradient(135deg, #ffd1dc 0%, #e0c3fc 100%); }
+        .card-hover:hover { transform: translateY(-10px); transition: all 0.4s ease; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <nav class="fixed w-full z-50 glass border-b border-white/20 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold tracking-tighter">STUDIO.DESAIN</h1>
+            <div class="hidden md:flex gap-8 text-sm font-semibold uppercase tracking-widest">
+                <a href="#home" class="hover:text-pink-500 transition">Home</a>
+                <a href="#portfolio" class="hover:text-pink-500 transition">Works</a>
+                <a href="#pricing" class="hover:text-pink-500 transition">Price</a>
+                <a href="https://wa.me/6288985114256" target="_blank" class="bg-black text-white px-5 py-2 rounded-full hover:bg-pink-500 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-6">
+        <div class="text-center">
+            <div class="inline-block px-4 py-1 border border-pink-300 rounded-full text-pink-500 text-sm font-bold mb-6 animate-bounce">
+                Available for New Projects ✨
+            </div>
+            <h1 class="text-6xl md:text-8xl font-bold tracking-tighter mb-6">Creative Design <br><span class="text-transparent bg-clip-text pink-gradient">for Gen Z.</span></h1>
+            <p class="text-slate-500 max-w-md mx-auto mb-10">Mengubah ide gila menjadi visual aesthetic yang stand out di media sosial.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#portfolio" class="bg-black text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl transition">Lihat Portofolio</a>
+                <a href="https://wa.me/6288985114256" class="bg-white border border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 transition">Order Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+            <div>
+                <h2 class="text-4xl font-bold tracking-tight mb-2">My Creative Vault</h2>
+                <p class="text-slate-500">Pilih kategori untuk memfilter karya.</p>
+            </div>
+            <div class="flex gap-2 flex-wrap" id="filter-container">
+                <button onclick="filterWorks('All')" class="px-6 py-2 rounded-full border border-pink-200 bg-pink-100 text-pink-600 font-bold">All</button>
+                <button onclick="filterWorks('Logo')" class="px-6 py-2 rounded-full border border-slate-200 hover:bg-white transition">Logo</button>
+                <button onclick="filterWorks('Poster')" class="px-6 py-2 rounded-full border border-slate-200 hover:bg-white transition">Poster</button>
+                <button onclick="filterWorks('Social Media')" class="px-6 py-2 rounded-full border border-slate-200 hover:bg-white transition">Social Media</button>
+            </div>
+        </div>
+
+        <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </div>
+    </section>
+
+    <section id="pricing" class="py-24 bg-white px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Pricelist</h2>
+                <p class="text-slate-500">Investasi terbaik untuk branding brand kamu.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-[2.5rem] border border-slate-100 bg-slate-50 card-hover">
+                    <h3 class="font-bold text-slate-400 uppercase tracking-widest text-sm">Basic Logo</h3>
+                    <p class="text-4xl font-bold my-6">Rp 250k</p>
+                    <ul class="space-y-3 mb-10 text-slate-600">
+                        <li>✓ 2 Opsi Desain</li>
+                        <li>✓ Revisi 3x</li>
+                        <li>✓ File PNG & JPG</li>
+                    </ul>
+                    <a href="https://wa.me/6288985114256?text=Halo, mau tanya paket Basic Logo" class="block text-center py-4 bg-black text-white rounded-full font-bold">Pilih Paket</a>
+                </div>
+                <div class="p-8 rounded-[2.5rem] border-2 border-pink-200 bg-white shadow-xl card-hover relative">
+                    <span class="absolute top-0 right-10 -translate-y-1/2 bg-pink-500 text-white px-4 py-1 rounded-full text-xs font-bold">BEST SELLER</span>
+                    <h3 class="font-bold text-slate-400 uppercase tracking-widest text-sm">Social Media Kit</h3>
+                    <p class="text-4xl font-bold my-6">Rp 500k</p>
+                    <ul class="space-y-3 mb-10 text-slate-600">
+                        <li>✓ 6 Template Feed IG</li>
+                        <li>✓ 3 Story Template</li>
+                        <li>✓ Revisi Sepuasnya</li>
+                    </ul>
+                    <a href="https://wa.me/6288985114256?text=Halo, mau tanya paket Social Media Kit" class="block text-center py-4 bg-pink-500 text-white rounded-full font-bold">Pilih Paket</a>
+                </div>
+                <div class="p-8 rounded-[2.5rem] border border-slate-100 bg-slate-50 card-hover">
+                    <h3 class="font-bold text-slate-400 uppercase tracking-widest text-sm">Full Branding</h3>
+                    <p class="text-4xl font-bold my-6">Rp 1.2M</p>
+                    <ul class="space-y-3 mb-10 text-slate-600">
+                        <li>✓ Logo Utama & Secondary</li>
+                        <li>✓ Brand Guideline</li>
+                        <li>✓ Kartu Nama & Stationary</li>
+                    </ul>
+                    <a href="https://wa.me/6288985114256?text=Halo, mau tanya paket Full Branding" class="block text-center py-4 bg-black text-white rounded-full font-bold">Pilih Paket</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 max-w-3xl mx-auto">
+        <div class="bg-pink-50 p-10 rounded-[3rem] border border-pink-100">
+            <h2 class="text-2xl font-bold mb-6 text-center">Admin: Tambah Karya Baru</h2>
+            <form id="upload-form" class="space-y-4">
+                <input type="text" id="title" placeholder="Judul Karya" class="w-full px-6 py-4 rounded-2xl border-none ring-1 ring-slate-200 focus:ring-2 focus:ring-pink-400 outline-none" required>
+                <select id="category" class="w-full px-6 py-4 rounded-2xl border-none ring-1 ring-slate-200 outline-none">
+                    <option value="Logo">Logo</option>
+                    <option value="Poster">Poster</option>
+                    <option value="Social Media">Social Media</option>
+                </select>
+                <input type="text" id="image-url" placeholder="Link Gambar (URL)" class="w-full px-6 py-4 rounded-2xl border-none ring-1 ring-slate-200 outline-none" required>
+                <textarea id="desc" placeholder="Deskripsi Singkat" class="w-full px-6 py-4 rounded-2xl border-none ring-1 ring-slate-200 outline-none h-32" required></textarea>
+                <button type="submit" class="w-full py-4 bg-pink-500 text-white rounded-full font-bold shadow-lg hover:bg-pink-600 transition">Upload ke Galeri</button>
+            </form>
+            <p class="text-[10px] text-pink-400 mt-4 text-center">Karya akan disimpan di memori browser (Local Storage) kamu.</p>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center border-t border-slate-100">
+        <p class="text-slate-400 text-sm">© 2024 Studio Desain. Created for Gen Z Designers.</p>
+        <div class="flex justify-center gap-6 mt-6">
+            <a href="https://wa.me/6288985114256" class="text-slate-400 hover:text-green-500">WhatsApp</a>
+            <a href="#" class="text-slate-400 hover:text-pink-500">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        // Data Awal (Dummy)
+        const defaultWorks = [
+            { title: "Neon Future Poster", category: "Poster", image: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=800", desc: "Aesthetic cyberpunk poster design." },
+            { title: "Minimalist Coffee Logo", category: "Logo", image: "https://images.unsplash.com/photo-1525904097878-94fb15835963?q=80&w=800", desc: "Clean and modern branding for cafe." },
+            { title: "Instagram Carousel", category: "Social Media", image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=800", desc: "Engagement focused social media kit." }
+        ];
+
+        // Load data dari Local Storage atau gunakan default
+        let works = JSON.parse(localStorage.getItem('myWorks')) || defaultWorks;
+
+        const grid = document.getElementById('portfolio-grid');
+        const uploadForm = document.getElementById('upload-form');
+
+        // Fungsi menampilkan karya
+        function renderWorks(filter = 'All') {
+            grid.innerHTML = '';
+            const filtered = filter === 'All' ? works : works.filter(w => w.category === filter);
+            
+            filtered.forEach((work, index) => {
+                grid.innerHTML += `
+                    <div class="bg-white rounded-[2rem] overflow-hidden shadow-sm card-hover border border-slate-100">
+                        <img src="${work.image}" alt="${work.title}" class="w-full aspect-[4/5] object-cover">
+                        <div class="p-8">
+                            <span class="text-[10px] font-bold text-pink-500 uppercase tracking-widest">${work.category}</span>
+                            <h3 class="text-xl font-bold mt-2">${work.title}</h3>
+                            <p class="text-slate-500 text-sm mt-3">${work.desc}</p>
+                            <button onclick="alert('Detail: ${work.desc}')" class="mt-6 text-sm font-bold border-b-2 border-black pb-1 hover:text-pink-500 hover:border-pink-500 transition">VIEW PROJECT</button>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        // Fungsi Filter
+        function filterWorks(cat) {
+            renderWorks(cat);
+            // Ganti style tombol aktif (simple)
+            const buttons = document.querySelectorAll('#filter-container button');
+            buttons.forEach(btn => {
+                btn.className = "px-6 py-2 rounded-full border border-slate-200 hover:bg-white transition";
+                if(btn.innerText === cat) {
+                    btn.className = "px-6 py-2 rounded-full border border-pink-200 bg-pink-100 text-pink-600 font-bold";
+                }
+            });
+        }
+
+        // Handle Form Upload
+        uploadForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const newWork = {
+                title: document.getElementById('title').value,
+                category: document.getElementById('category').value,
+                image: document.getElementById('image-url').value,
+                desc: document.getElementById('desc').value
+            };
+            
+            works.unshift(newWork);
+            localStorage.setItem('myWorks', JSON.stringify(works));
+            renderWorks();
+            uploadForm.reset();
+            alert('Karya berhasil ditambahkan!');
+        });
+
+        // Jalankan saat pertama kali buka
+        renderWorks();
+    </script>
+</body>
+</html>
